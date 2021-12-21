@@ -18,6 +18,8 @@ ENV DB_USER "postgres"
 ENV DB_PASS "admin"
 ENV DB_NAME "kZ3yr37JLY3Nr3JUbuEg"
 
+
+
 COPY --from=builder /app/main .
 RUN mkdir logs && chmod -R 777 logs
 RUN mkdir sdpcollection && chmod -R 777 sdpcollection
