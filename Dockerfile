@@ -22,5 +22,6 @@ COPY --from=builder /app/main .
 RUN mkdir logs && chmod -R 777 logs
 RUN mkdir sdpcollection && chmod -R 777 sdpcollection
 
+
 EXPOSE 8080
 CMD ["./main"]
