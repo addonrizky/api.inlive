@@ -1,0 +1,13 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/asgard-livestream/api.inlive', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/asgard-livestream/api.inlive']
+# Update the compute engine with new image
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['compute','instance-groups','managed', 'rolling-action', 'start-update', 'api-inlive','--version=template=api-inlive-template-3', '--zone=asia-southeast2-a']
+images:
+- gcr.io/asgard-livestream/api.inlive
