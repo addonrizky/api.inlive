@@ -15,8 +15,8 @@ ENV SDP_FILENAME "rtpforwarder.sdp"
 
 ENV DB_HOST "34.101.236.119"
 ENV DB_USER "postgres"
-ENV DB_PASS "admin"
-ENV DB_NAME "kZ3yr37JLY3Nr3JUbuEg"
+ENV DB_PASS "kZ3yr37JLY3Nr3JUbuEg"
+ENV DB_NAME "livestream"
 
 
 

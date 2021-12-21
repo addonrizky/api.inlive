@@ -1,10 +1,10 @@
 steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/asgard-livestream/api.inlive', '.']
+  args: ['build', '-t', 'gcr.io/plated-shelter-329723/github.com/addonrizky/api.inlive:4e3012d4d18eaf36f25a96ddf88c8c93cf9a61b5', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/asgard-livestream/api.inlive']
+  args: ['push', 'gcr.io/plated-shelter-329723/github.com/addonrizky/api.inlive:4e3012d4d18eaf36f25a96ddf88c8c93cf9a61b5']
 # Update the compute engine with new image
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
